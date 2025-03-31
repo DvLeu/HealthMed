@@ -1,0 +1,137 @@
+/* Estilo general de cuerpo */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Contenedor principal del chat */
+  .chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  /* Encabezado del chat */
+  .chat-header {
+    padding: 1rem;
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+  }
+  
+  .chat-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .chat-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  /* Área donde se muestran los mensajes */
+  .chat-box {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #f9fbfd;
+  }
+  
+  /* Cada mensaje del chat */
+  .message {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  /* Círculo del avatar (Tú / AI) */
+  .avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #0077cc;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  /* Burbuja del mensaje */
+  .bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    max-width: 80%;
+    font-size: 0.95rem;
+  }
+  
+  /* Mensajes del usuario */
+  .user .bubble {
+    background-color: #dbeeff;
+    margin-left: auto;
+    margin-right: 0;
+    border-top-right-radius: 0;
+  }
+  
+  /* Mensajes del bot */
+  .bot .bubble {
+    background-color: #e6f2ea;
+    border-top-left-radius: 0;
+  }
+  
+  /* Área de entrada de texto */
+  .input-area {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .input-area input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .input-area button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* Estilos adaptables en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .chat-container {
+      height: 100vh;
+      border-radius: 0;
+    }
+  
+    .chat-box {
+      padding: 0.5rem;
+    }
+  
+    .input-area {
+      padding: 0.5rem;
+    }
+  }
+  
